@@ -13,8 +13,8 @@ class Best extends Component {
     componentWillMount(){
         axios.get('http://165.227.1.54:5000/drinks')
         .then((res) =>{
-            let reversed = res.data.reverse();
-            let lastD = reversed.slice(reversed.length-5)
+            // let reversed = res.data.reverse();
+            let lastD = res.data.slice(res.data.length-3)
             this.setState({
                 data: lastD
             })
@@ -31,12 +31,15 @@ class Best extends Component {
                 <div className="drinks">
                 {this.state.data.map(item => (
                     <div key={item._id} className="drink_card">
-                        <img src={item.imagen} alt=""/>
-                        <h2>{item.nombre}</h2>
-                        <p>{item.descripcion}</p>
+                        <div className="drink_card_img" style={{backgroundImage:`url(${item.imagen})`}}></div>
+                        <div className="drink_card_desc">
+                            <h2>{item.nombre}</h2>
+                            <p>{item.descripcion}</p>
+                        </div>
                     </div>   
                 ))}
-                </div>   
+                </div>  
+                {console.log(this.state)} 
             </div>
         );
     }
