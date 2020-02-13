@@ -1,0 +1,12 @@
+.carousel .slide{
+    background: #828693!important;
+}
+
+.slider_drink{
+    height: 100%;
+}
+
+.slider_drink img{
+    height: 100%;
+    object-fit: cover;
+}

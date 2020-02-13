@@ -1,28 +1,49 @@
-import React from 'react'
+import React, { Component } from 'react';
 import ejemplo from '../../../media/example.png'
 import '../../../styles/slider.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import axios from 'axios'
 import { Carousel } from 'react-responsive-carousel';
 
 // https://www.npmjs.com/package/react-responsive-carousel
 
-const Slider = () => {
-    return (
-        <Carousel showThumbs={false} showStatus={false}>
-            <div>
-                <img src={ejemplo} alt="ejemplo"/>
-                <p className="legend">Legend 1</p>
-            </div>
-            <div>
-                <img src={ejemplo} alt="ejemplo"/>
-                <p className="legend">Legend 2</p>
-            </div>
-            <div>
-                <img src={ejemplo} alt="ejemplo"/>
-                <p className="legend">Legend 3</p>
-            </div>
-        </Carousel>
-    )
+class Slider extends Component {
+    constructor(){
+        super();
+        this.state = {
+            data:[]
+        }
+    }
+
+    componentWillMount(){
+        axios.get('http://165.227.1.54:5000/drinks')
+        .then((res) =>{
+            // let reversed = res.data.reverse();
+            let lastD = res.data.slice(res.data.length-3)
+            this.setState({
+                data: lastD
+            })
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+    }
+
+    render(){
+        return (
+            <Carousel showThumbs={false} showStatus={false}>
+                {this.state.data.map(item => (
+                    <div key={item._id} className="slider_drink">
+                        <img src={item.imagen} alt="ejemplo"/>
+                        <div className="legend">
+                            <h2>{item.nombre}</h2>
+                            <p>{item.descripcion}</p>
+                        </div>
+                    </div>  
+                ))}
+            </Carousel>
+        )
+    }
 }
 
 export default Slider;
