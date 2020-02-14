@@ -32,7 +32,7 @@ export default class Api extends Component {
       Con esta petición puedes sacar toda la información del drink que
       buscaste por nombre
     </p>
-    <figure className="img_call"><img src="http://165.227.1.54:5000/public/get_nombre.jpg" /></figure>
+    <figure className="img_call"><img src="http://165.227.1.54:5000/public/get_nombre.png" /></figure>
 
     <h3>GET /drinks/id/id del drink</h3>
     <p>
