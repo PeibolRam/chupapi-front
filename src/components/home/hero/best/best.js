@@ -29,17 +29,16 @@ class Best extends Component {
             <div className="bests_drinks">
                 <h1>Últimas bebidas</h1>
                 <div className="drinks">
-                {this.state.data.map(item => (
-                    <div key={item._id} className="drink_card">
-                        <div className="drink_card_img" style={{backgroundImage:`url(${item.imagen})`}}></div>
-                        <div className="drink_card_desc">
-                            <h2>{item.nombre}</h2>
-                            <p>{item.descripcion}</p>
-                        </div>
-                    </div>   
-                ))}
+                    {this.state.data.map(item => (
+                        <div key={item._id} className="drink_card">
+                            <div className="drink_card_img" style={{backgroundImage:`url(${item.imagen})`}}></div>
+                            <div className="drink_card_desc">
+                                <h2>{item.nombre}</h2>
+                                <p>{item.descripcion}</p>
+                            </div>
+                        </div>   
+                    ))}
                 </div>  
-                {console.log(this.state)} 
             </div>
         );
     }

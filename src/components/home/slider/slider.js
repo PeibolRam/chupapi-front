@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ejemplo from '../../../media/example.png'
 import '../../../styles/slider.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import axios from 'axios'
@@ -19,7 +18,7 @@ class Slider extends Component {
         axios.get('http://165.227.1.54:5000/drinks')
         .then((res) =>{
             // let reversed = res.data.reverse();
-            let lastD = res.data.slice(res.data.length-3)
+            let lastD = res.data.slice(res.data.length-6, res.data.length-3)
             this.setState({
                 data: lastD
             })

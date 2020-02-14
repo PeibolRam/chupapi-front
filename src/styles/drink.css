@@ -1,0 +1,18 @@
+.drink_info img {
+    max-height: 500px;
+    margin: 1em;
+    border-radius: 10px;
+}
+
+.drink_info ul{
+    list-style-type: disc!important;
+}
+
+.drink_info_desc{
+    width: 60%;
+    margin: 1em auto;
+}
+
+.drink_info_desc h2, h3{
+    margin: 1em auto;
+}

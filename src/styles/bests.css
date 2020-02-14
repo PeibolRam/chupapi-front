@@ -14,6 +14,7 @@
     width: 30%;
     margin: 1em;
     border-radius: 5px;
+    overflow: hidden;
 }
 
 .drink_card_img{
@@ -24,6 +25,26 @@
     border-radius: 5px;
 }
 
+.drink_card_img:hover {
+    transition-duration: 1s;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    z-index: 0;
+}
+
 .drink_card_desc{
     margin: 2em auto;
+}
+
+@media screen and (max-width: 768px){
+    .drink_card{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .drink_card{
+        width: 90%;
+    }
 }

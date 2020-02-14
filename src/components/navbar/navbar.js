@@ -3,16 +3,15 @@ import {
     Link
   } from "react-router-dom";
 import '../../styles/navbar.css'
-import logo from '../../media/logo.png'
 
 
 const Navbar = () => {
     return(
         <div className="head_chupapi">
-            <img src={logo} alt=""/> 
+            <Link to="/"><img src="http://165.227.1.54:5000/public/logo.png" alt=""/> </Link>
             <ul className="navbar_chupapi">
                 <li><Link to="/">Home</Link></li>
-                <li><Link to="/search">Search drink</Link></li>
+                <li><Link to="/drinks">Drinks</Link></li>
                 <li><Link to="/api">API</Link></li>
             </ul>
         </div>

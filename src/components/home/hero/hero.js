@@ -6,7 +6,7 @@ const Hero = () => {
     return(
         <div className="hero_chupapi">
             <div className="desc_chupapi">
-                <h1>ChupAPI</h1>
+                <h1>APIstear</h1>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil deleniti ratione voluptates repellendus provident delectus optio itaque eos, sed eum, veniam quidem ducimus blanditiis quos commodi repellat voluptatibus, iure sapiente.
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint earum adipisci est dolorem, sed sequi a officiis. Ea vitae cum qui dignissimos sed vero, nam totam quasi doloremque dolores dolorem?
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur consequatur eaque repellat incidunt maiores veritatis impedit, mollitia obcaecati placeat est totam, optio cum quae, ea veniam fuga itaque rem ut.
