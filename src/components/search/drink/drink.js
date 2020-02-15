@@ -27,7 +27,6 @@ export default class Drink extends Component {
             <div>
                 {this.state.data.map(item => ( 
                     <div key={item._id} className="drink_info">
-                        {console.log(item)}
                         <img src={item.imagen} alt=""/>
                         <div className="drink_info_desc">
                             <h1>{item.nombre}</h1>
