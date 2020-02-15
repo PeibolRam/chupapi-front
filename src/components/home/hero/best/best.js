@@ -11,7 +11,7 @@ class Best extends Component {
     }
 
     componentWillMount(){
-        axios.get('http://localhost:5000/drinks')
+        axios.get('http://165.227.1.54:5000/drinks')
         .then((res) =>{
             // let reversed = res.data.reverse();
             let lastD = res.data.slice(res.data.length-3)
