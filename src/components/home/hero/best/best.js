@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import '../../../../styles/bests.css'
+import { Link } from "react-router-dom";
 
 class Best extends Component {
     constructor(){
@@ -31,11 +32,13 @@ class Best extends Component {
                 <div className="drinks">
                     {this.state.data.map(item => (
                         <div key={item._id} className="drink_card">
-                            <div className="drink_card_img" style={{backgroundImage:`url(${item.imagen})`}}></div>
-                            <div className="drink_card_desc">
-                                <h2>{item.nombre}</h2>
-                                <p>{item.descripcion}</p>
-                            </div>
+                            <Link to={`/drinks/id/${item.id}`} >
+                                <div className="drink_card_img" style={{backgroundImage:`url(${item.imagen})`}}></div>
+                                <div className="drink_card_desc">
+                                    <h2>{item.nombre}</h2>
+                                    <p>{item.descripcion}</p>
+                                </div>
+                            </Link>
                         </div>   
                     ))}
                 </div>  
