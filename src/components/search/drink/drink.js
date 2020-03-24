@@ -10,8 +10,8 @@ export default class Drink extends Component {
         }
     }
 
-    componentWillMount(){
-        axios.get(`http://165.227.1.54:5000/drinks/id/${this.props.id}`)
+    componentDidMount(){
+        axios.get(`https://apistear-drinks.herokuapp.com/drinks/id/${this.props.id}`)
         .then((res) =>{
             this.setState({
                 data: res.data

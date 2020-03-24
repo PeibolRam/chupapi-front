@@ -20,8 +20,8 @@ class App extends Component{
       }
   }
 
-  componentWillMount(){
-      axios.get(`http://165.227.1.54:5000/drinks`)
+  componentDidMount(){
+      axios.get(`https://apistear-drinks.herokuapp.com/drinks`)
       .then((res) =>{
           this.setState({
               data: res.data
@@ -48,8 +48,8 @@ class App extends Component{
               <DrinksApi />
           </Route>
           {this.state.data.map(item => ( 
-              <Route key={item._id} exact  path={`/drinks/id/${item.id}` }>
-                  <Drink id={item.id}/>
+              <Route key={item._id} exact path={`/drinks/id/${item._id}` }>
+                  <Drink id={item._id}/>
               </Route>              
           ))}
         </Switch>

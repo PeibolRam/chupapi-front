@@ -11,8 +11,8 @@ class Best extends Component {
         }
     }
 
-    componentWillMount(){
-        axios.get('http://165.227.1.54:5000/drinks')
+    componentDidMount(){
+        axios.get('https://apistear-drinks.herokuapp.com/drinks')
         .then((res) =>{
             // let reversed = res.data.reverse();
             let lastD = res.data.slice(res.data.length-3)
@@ -32,7 +32,7 @@ class Best extends Component {
                 <div className="drinks">
                     {this.state.data.map(item => (
                         <div key={item._id} className="drink_card">
-                            <Link to={`/drinks/id/${item.id}`} >
+                            <Link to={`/drinks/id/${item._id}`} >
                                 <div className="drink_card_img" style={{backgroundImage:`url(${item.imagen})`}}></div>
                                 <div className="drink_card_desc">
                                     <h2>{item.nombre}</h2>

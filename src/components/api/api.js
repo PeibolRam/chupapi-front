@@ -25,32 +25,32 @@ export default class Api extends Component {
         <h2>Peticiones disponibles</h2>
         <h3>GET /drinks/</h3>
     <p>Con esta petición puedes sacar toda la información de la base</p>
-    <figure className="img_call"><img alt="" src="http://165.227.1.54:5000/public/get_drinks.png" /></figure>
+    <figure className="img_call"><img alt="" src="https://apistear-drinks.herokuapp.com/public/get_drinks.png" /></figure>
 
     <h3>GET /drinks/nombre/nombre de tu drink</h3>
     <p>
       Con esta petición puedes sacar toda la información del drink que
       buscaste por nombre
     </p>
-    <figure className="img_call"><img alt="" src="http://165.227.1.54:5000/public/get_nombre.png" /></figure>
+    <figure className="img_call"><img alt="" src="https://apistear-drinks.herokuapp.com/public/get_nombre.png" /></figure>
 
     <h3>GET /drinks/id/id del drink</h3>
     <p>
       Con esta petición puedes sacar toda la información del drink que
       buscaste por ID
     </p>
-    <figure className="img_call"><img alt="" src="http://165.227.1.54:5000/public/get_id.png" /></figure>
+    <figure className="img_call"><img alt="" src="https://apistear-drinks.herokuapp.com/public/get_id.png" /></figure>
 
     <h3>GET /drinks/base/bebida base</h3>
     <p>
       Con esta petición puedes sacar todos los cocteles que usan la base
       especificada
     </p>
-    <figure className="img_call"><img alt="" src="http://165.227.1.54:5000/public/get_base.png" /></figure>
+    <figure className="img_call"><img alt="" src="https://apistear-drinks.herokuapp.com/public/get_base.png" /></figure>
 
     <h3>POST /drinks/register/</h3>
     <p>Con esta petición puedes dar de alta nuevos drinks</p>
-    <figure className="img_call"><img alt="" src="http://165.227.1.54:5000/public/post_register.png" /></figure>
+    <figure className="img_call"><img alt="" src="https://apistear-drinks.herokuapp.com/public/post_register.png" /></figure>
     </div>
     <div className="wrapper">
       <h2>Descripción de los elementos</h2>

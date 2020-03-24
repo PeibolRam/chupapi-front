@@ -14,8 +14,8 @@ class Slider extends Component {
         }
     }
 
-    componentWillMount(){
-        axios.get('http://165.227.1.54:5000/drinks')
+    componentDidMount(){
+        axios.get('https://apistear-drinks.herokuapp.com/drinks')
         .then((res) =>{
             // let reversed = res.data.reverse();
             let lastD = res.data.slice(res.data.length-6, res.data.length-3)
